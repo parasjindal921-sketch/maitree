@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday, Maitree 🌸</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,500&family=Yeseva+One&family=Mukta:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#5b1522; --deep:#2d0910; --rose:#e39aa8; --gold:#d9ac5f;
+  --gold-soft:#f5e3bd; --cream:#fbf1e6;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);}
+html,body{margin:0;min-height:100%;background:var(--deep);color:var(--cream);
+  font-family:'Mukta',sans-serif;overflow-x:hidden;}
+body::before{content:"";position:fixed;inset:0;z-index:0;
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 0%,#8a2438 0%,transparent 60%),
+    radial-gradient(ellipse 70% 50% at 85% 20%,#6b1c2c 0%,transparent 55%),
+    radial-gradient(ellipse 90% 60% at 50% 100%,#701e30 0%,transparent 60%),
+    linear-gradient(180deg,#2d0910,#4a1119 45%,#2d0910);
+  background-size:180% 180%;animation:drift 22s ease-in-out infinite;}
+@keyframes drift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* GATE */
+#gate{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;text-align:center;padding:30px;
+  background:linear-gradient(180deg,#2d0910,#4a1119);transition:opacity .8s ease,visibility .8s;}
+#gate.hide{opacity:0;visibility:hidden;}
+#gate .box{font-size:62px;animation:float 3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-3deg)}50%{transform:translateY(-14px) rotate(3deg)}}
+#gate h3{font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;
+  font-size:1.45rem;color:var(--gold-soft);margin:22px 0 4px;}
+#gate small{color:var(--rose);font-size:.85rem;letter-spacing:.06em;}
+#openBtn{margin-top:26px;background:linear-gradient(135deg,var(--gold),#b9812f);
+  color:#2a1607;border:none;border-radius:999px;padding:15px 38px;font-weight:600;
+  font-size:1rem;font-family:'Mukta',sans-serif;cursor:pointer;
+  box-shadow:0 0 0 0 rgba(217,172,95,.6);animation:ring 2.4s infinite;}
+@keyframes ring{0%{box-shadow:0 0 0 0 rgba(217,172,95,.45)}70%{box-shadow:0 0 0 22px rgba(217,172,95,0)}100%{box-shadow:0 0 0 0 rgba(217,172,95,0)}}
+
+#petals{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden;}
+.petal{position:absolute;top:-40px;opacity:.8;animation:fall linear infinite;
+  filter:drop-shadow(0 0 4px rgba(0,0,0,.25));}
+@keyframes fall{to{transform:translateY(112vh) rotate(420deg)}}
+
+.wrap{max-width:660px;margin:0 auto;padding:0 22px 150px;position:relative;z-index:2;}
+
+.hero{min-height:92vh;display:flex;flex-direction:column;align-items:center;
+  justify-content:center;text-align:center;padding-top:40px;}
+.heart{font-size:36px;animation:pulse 2.2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.16)}}
+.hero h1{font-family:'Yeseva One',serif;font-weight:400;
+  font-size:clamp(2.7rem,12vw,4.4rem);line-height:1.04;margin:14px 0 12px;
+  background:linear-gradient(100deg,#f5e3bd 20%,#fff8e6 40%,#d9ac5f 55%,#f5e3bd 75%);
+  background-size:220% auto;-webkit-background-clip:text;background-clip:text;
+  -webkit-text-fill-color:transparent;animation:shine 6s linear infinite;}
+@keyframes shine{to{background-position:220% center}}
+.hinglish{font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.4rem;color:var(--rose);margin:0 0 24px;}
+.sub{font-size:1.03rem;max-width:430px;line-height:1.7;color:#f3e4e7;margin:0 auto;font-weight:300;}
+.scroll-hint{margin-top:44px;font-size:.82rem;letter-spacing:.04em;
+  color:var(--gold-soft);opacity:.75;animation:bob 2s ease-in-out infinite;}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(9px)}}
+
+section{padding:54px 0;}
+.divider{width:70px;height:1px;margin:0 auto 20px;
+  background:linear-gradient(90deg,transparent,var(--gold),transparent);}
+h2{font-family:'Yeseva One',serif;font-weight:400;font-size:clamp(1.5rem,6vw,2.05rem);
+  color:var(--gold-soft);text-align:center;margin:0 0 30px;}
+
+.rise{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease;}
+.rise.in{opacity:1;transform:none;}
+
+.letter{background:linear-gradient(180deg,rgba(251,241,230,.08),rgba(251,241,230,.03));
+  border:1px solid rgba(217,172,95,.32);border-radius:8px;padding:38px 26px;position:relative;
+  backdrop-filter:blur(3px);box-shadow:0 20px 50px rgba(0,0,0,.25);}
+.letter::before{content:"❝";position:absolute;top:-20px;left:22px;font-size:2.5rem;
+  color:var(--gold);font-family:Georgia,serif;background:#3a0d16;padding:0 10px;border-radius:4px;}
+.letter p{font-family:'Cormorant Garamond',serif;font-size:1.26rem;line-height:1.9;
+  color:#f7ece5;margin:0 0 20px;}
+.letter p:last-of-type{margin-bottom:0;}
+.signature{text-align:right;font-family:'Cormorant Garamond',serif;font-style:italic;
+  font-size:1.5rem;color:var(--rose);margin-top:26px;}
+
+.reasons{display:flex;flex-direction:column;gap:14px;}
+.reason{display:flex;align-items:flex-start;gap:15px;background:rgba(217,172,95,.07);
+  border-left:3px solid var(--gold);padding:16px 17px;border-radius:3px;
+  transition:background .3s ease,transform .3s ease;}
+.reason:hover{background:rgba(217,172,95,.13);transform:translateX(4px);}
+.reason .num{font-family:'Yeseva One',serif;font-size:1.15rem;color:var(--gold-soft);min-width:28px;}
+.reason p{margin:0;font-size:1rem;line-height:1.65;color:#f3e4e7;font-weight:300;}
+
+.question-card{text-align:center;background:radial-gradient(ellipse at top,rgba(217,172,95,.14),transparent 70%);
+  border:1px solid rgba(217,172,95,.28);border-radius:12px;padding:42px 20px 50px;}
+.q{font-family:'Cormorant Garamond',serif;font-size:1.6rem;font-style:italic;
+  color:var(--gold-soft);margin:0 0 30px;line-height:1.5;}
+.btn-row{position:relative;display:flex;justify-content:center;align-items:center;
+  gap:16px;min-height:130px;flex-wrap:wrap;}
+button.choice{font-family:'Mukta',sans-serif;font-weight:600;font-size:1.03rem;
+  padding:14px 32px;border-radius:999px;border:none;cursor:pointer;}
+#yesBtn{background:linear-gradient(135deg,var(--gold),#b9812f);color:#2a1607;
+  box-shadow:0 6px 22px rgba(217,172,95,.35);transition:transform .3s ease,box-shadow .3s ease;}
+#noBtn{background:transparent;color:var(--rose);border:1.5px solid var(--rose);
+  transition:transform .2s ease;}
+#noBtn.moving{position:absolute;}
+.reveal{display:none;margin-top:28px;font-family:'Cormorant Garamond',serif;
+  font-size:1.3rem;font-style:italic;color:var(--gold-soft);line-height:1.6;}
+.reveal.show{display:block;animation:fadeUp .6s ease;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+footer{text-align:center;padding:26px 20px 0;font-family:'Cormorant Garamond',serif;
+  font-style:italic;color:rgba(245,227,189,.55);font-size:.95rem;}
+
+/* PLAYER */
+.player{position:fixed;left:50%;transform:translateX(-50%);
+  bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;width:min(420px,calc(100% - 28px));
+  display:flex;align-items:center;gap:12px;background:rgba(45,9,16,.88);
+  border:1px solid rgba(217,172,95,.38);backdrop-filter:blur(10px);
+  border-radius:18px;padding:10px 14px 10px 10px;box-shadow:0 10px 34px rgba(0,0,0,.45);}
+#playBtn{width:42px;height:42px;flex:0 0 42px;border-radius:50%;border:none;cursor:pointer;
+  background:linear-gradient(135deg,var(--gold),#b9812f);color:#2a1607;font-size:15px;
+  display:flex;align-items:center;justify-content:center;}
+.meta{flex:1;min-width:0;}
+.meta b{display:block;font-weight:600;font-size:.84rem;color:var(--gold-soft);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.meta small{display:block;font-size:.7rem;color:rgba(227,154,168,.85);
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+#bar{margin-top:6px;height:4px;border-radius:99px;background:rgba(245,227,189,.2);cursor:pointer;}
+#fill{height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--rose),var(--gold));}
+.eq{display:flex;align-items:flex-end;gap:2px;height:16px;}
+.eq i{width:3px;background:var(--gold);border-radius:2px;height:4px;}
+.eq.on i:nth-child(1){animation:eq .7s ease-in-out infinite}
+.eq.on i:nth-child(2){animation:eq .55s ease-in-out infinite .1s}
+.eq.on i:nth-child(3){animation:eq .8s ease-in-out infinite .2s}
+@keyframes eq{0%,100%{height:4px}50%{height:15px}}
+
+@media (prefers-reduced-motion:reduce){
+  .petal,.heart,.scroll-hint,.hero h1,body::before,#gate .box{animation:none!important}
+  .rise{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<div id="gate">
+  <div class="box">🎁</div>
+  <h3>Something's waiting for you, Maitree</h3>
+  <small>best with sound on 🎧</small>
+  <button id="openBtn">Open it</button>
+</div>
+
+<div id="petals"></div>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="heart">💛</div>
+    <h1>Happy Birthday<br>Maitree</h1>
+    <p class="hinglish">Meri sabse khaas dost</p>
+    <p class="sub">Aaj ka din sirf tumhara hai — the person who makes every ordinary moment feel like the best part of my life.</p>
+    <div class="scroll-hint">scroll down, likha hai kuch tumhare liye ↓</div>
+  </div>
+
+  <section class="rise">
+    <div class="divider"></div>
+    <h2>A Letter For You</h2>
+    <div class="letter">
+      <p>Maitree,</p>
+      <p>I don't think I've ever properly told you what you mean to me, so I'm just going to be honest here. You are the sweetest person I know, and somehow you get sweeter every single day.</p>
+      <p>You're my favorite good-morning text and my favorite call when the day's gone sideways. You're the person I want to tell first when something good happens — and if I'm being completely honest, you're a little more than "just" my best friend to me. I'm not sure I've ever said that out loud before.</p>
+      <p>Today isn't just your birthday, though. It's the anniversary of the day the world got a little softer, a little kinder — because you arrived in it. And it's the day I get to remind you, out loud, that you are loved and valued more than you probably realize.</p>
+      <p>So here's to you — my favorite person. I hope this year hands you every single thing you deserve.</p>
+      <div class="signature">With so much love, always</div>
+    </div>
+  </section>
+
+  <section class="rise">
+    <div class="divider"></div>
+    <h2>Why You, Always</h2>
+    <div class="reasons">
+      <div class="reason"><span class="num">01</span><p>Because your laugh is the best sound I know.</p></div>
+      <div class="reason"><span class="num">02</span><p>Because you make hard days softer just by being on the other end of the phone.</p></div>
+      <div class="reason"><span class="num">03</span><p>Because you love the people around you fiercely, honestly, and completely — and I never take that for granted.</p></div>
+      <div class="reason"><span class="num">04</span><p>Because somehow, being around you always feels like exactly where I want to be.</p></div>
+      <div class="reason"><span class="num">05</span><p>Because this song has been playing in my head every time I think of you — and now you know why.</p></div>
+    </div>
+  </section>
+
+  <section class="rise">
+    <div class="divider"></div>
+    <div class="question-card">
+      <p class="q">Do you know how much you actually mean to me, Maitree?</p>
+      <div class="btn-row" id="btnRow">
+        <button class="choice" id="yesBtn">Yes, I know ❤️</button>
+        <button class="choice" id="noBtn">Not really 🙄</button>
+      </div>
+      <div class="reveal" id="reveal">Good — because it's more than I usually let on. Happy birthday, Maitree. 🌸</div>
+    </div>
+  </section>
+
+  <footer>made with a full heart, for Maitree 🌸</footer>
+</div>
+
+<div class="player">
+  <button id="playBtn">▶</button>
+  <div class="meta">
+    <b>Tujhko Jo Paaya</b>
+    <small>Mohit Chauhan · playing for you</small>
+    <div id="bar"><div id="fill"></div></div>
+  </div>
+  <div class="eq" id="eq"><i></i><i></i><i></i></div>
+</div>
+
+<audio id="song" src="song.mp3" preload="auto" loop></audio>
+
+<script>
+// petals
+const E=['🌸','🌺','💮','🌷','❤️','✨'],F=document.getElementById('petals');
+function petal(){const p=document.createElement('div');p.className='petal';
+ p.textContent=E[Math.floor(Math.random()*E.length)];p.style.left=Math.random()*100+'vw';
+ const d=8+Math.random()*8;p.style.animationDuration=d+'s';
+ p.style.fontSize=(13+Math.random()*15)+'px';F.appendChild(p);
+ setTimeout(()=>p.remove(),d*1000);}
+setInterval(petal,650);for(let i=0;i<10;i++)setTimeout(petal,i*220);
+function burst(){for(let i=0;i<40;i++)setTimeout(petal,i*45);}
+
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in')}),{threshold:.12});
+document.querySelectorAll('.rise').forEach(el=>io.observe(el));
+
+// music
+const song=document.getElementById('song'),playBtn=document.getElementById('playBtn'),
+ eq=document.getElementById('eq'),fill=document.getElementById('fill'),bar=document.getElementById('bar');
+function setUI(p){playBtn.textContent=p?'❚❚':'▶';eq.classList.toggle('on',p);}
+function play(){song.play().then(()=>setUI(true)).catch(()=>setUI(false));}
+playBtn.onclick=()=>{song.paused?play():(song.pause(),setUI(false));};
+song.addEventListener('timeupdate',()=>{if(song.duration)fill.style.width=(song.currentTime/song.duration*100)+'%';});
+bar.onclick=e=>{const r=bar.getBoundingClientRect();if(song.duration)song.currentTime=(e.clientX-r.left)/r.width*song.duration;};
+
+// gate
+document.getElementById('openBtn').onclick=()=>{
+  document.getElementById('gate').classList.add('hide');
+  song.volume=0;play();
+  let v=0;const fade=setInterval(()=>{v=Math.min(1,v+.04);song.volume=v;if(v>=1)clearInterval(fade);},120);
+  burst();
+};
+
+// yes / no
+let n=0;const noBtn=document.getElementById('noBtn'),yesBtn=document.getElementById('yesBtn'),row=document.getElementById('btnRow');
+const labels=["Not really 🙄","Are you sure? 🥺","Try again? 😏","Nope, can't catch me","Give up? 😄","It's a yes really ❤️"];
+function dodge(e){if(e)e.preventDefault();n++;
+ const r=row.getBoundingClientRect();noBtn.classList.add('moving');
+ const mx=Math.max(0,r.width-noBtn.offsetWidth-10),my=Math.max(0,r.height-noBtn.offsetHeight-10);
+ noBtn.style.left=Math.random()*mx+'px';noBtn.style.top=Math.random()*my+'px';
+ yesBtn.style.transform='scale('+Math.min(1.3,1+n*.05)+')';
+ yesBtn.style.boxShadow='0 10px 30px rgba(217,172,95,.55)';
+ noBtn.textContent=labels[Math.min(n,labels.length-1)];}
+noBtn.addEventListener('mouseover',dodge);
+noBtn.addEventListener('touchstart',dodge,{passive:false});
+noBtn.addEventListener('click',dodge);
+yesBtn.onclick=()=>{document.getElementById('reveal').classList.add('show');
+ yesBtn.textContent='Good ❤️';noBtn.style.display='none';burst();};
+</script>
+</body>
+</html>
